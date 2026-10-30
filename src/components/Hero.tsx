@@ -1,6 +1,5 @@
 import React from 'react';
 import { ArrowDown, Download } from 'lucide-react';
-
 const Hero = () => {
   return (
     <section
@@ -12,7 +11,6 @@ const Hero = () => {
         <div className="absolute top-40 right-20 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
         <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
       </div>
-
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
         <div className="animate-fade-in-up">
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
@@ -28,16 +26,18 @@ const Hero = () => {
             I specialize in creating intuitive and visually stunning interfaces
             that solve real problems and delight users.
           </p>
-
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animation-delay-700">
+            {/* View My Work Button */}
             <a
-              href="#portfolio"
+              href="https://colab.research.google.com/drive/1y1l0ZW1dSomURpR7ua82RdYiO66fxsO8?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
             >
               View My Work
               <ArrowDown size={20} />
             </a>
-
+            {/* Download CV Button */}
             <a
               href="/resume.pdf"
               target="_blank"
@@ -50,7 +50,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-
+      {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-pulse"></div>
@@ -59,5 +59,4 @@ const Hero = () => {
     </section>
   );
 };
-
 export default Hero;
